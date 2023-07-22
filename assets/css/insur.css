@@ -37,6 +37,11 @@
   --insur-letter-spacing: -0.02em;
 }
 
+.white-space {
+  height: 100px;
+  width: 100%;
+}
+
 .row {
   --bs-gutter-x: 30px;
 }
@@ -637,6 +642,7 @@ ul {
 .main-menu__left {
   display: block;
   float: left;
+  width: 100%;
 }
 
 .main-menu__logo {
@@ -708,11 +714,13 @@ ul {
   position: relative;
   display: block;
   float: right;
+  width: 50%;
 }
 
 .main-menu__call {
   position: relative;
   display: flex;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -2104,6 +2112,7 @@ ul {
   right: 0;
   bottom: 0;
   width: 63%;
+  height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -2220,6 +2229,7 @@ ul {
 
 .main-slider__text {
   font-size: 18px;
+  max-width: 50%;
   color: var(--insur-gray);
   font-weight: 400;
   letter-spacing: var(--insur-letter-spacing);
@@ -3329,9 +3339,9 @@ ul {
   min-height: 250px;
 }
 
-@media  (max-width: 768px) {
+@media (max-width: 768px) {
   .service-one__content {
-    min-height: auto
+    min-height: auto;
   }
 }
 
