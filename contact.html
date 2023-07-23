@@ -11,6 +11,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
     <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
     <meta name="description" content="Contact" />
+    <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -202,37 +203,43 @@
                     <div class="col-xl-8 col-lg-7">
                         <div class="contact-page__right">
                             <div class="contact-page__form">
-                                <form action="assets/inc/sendemail.php" class="comment-one__form contact-form-validated"
-                                    novalidate="novalidate">
+                                <form class="comment-one__form" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" >
+                                    <input type=hidden name="oid" value="00D6800000342OD">
+                                    <input type=hidden name="retURL" value="">
                                     <div class="row">
                                         <div class="col-xl-6">
                                             <div class="comment-form__input-box">
-                                                <input type="text" placeholder="Imię" name="name">
+                                                <label for="first_name">First Name</label><input placeholder="Imię"  id="first_name" minlength="2" maxlength="40" name="first_name" size="20" type="text" />
                                             </div>
                                         </div>
                                         <div class="col-xl-6">
                                             <div class="comment-form__input-box">
-                                                <input type="email" placeholder="Adres email" name="email">
+                                                <label for="last_name">Last Name</label><input  placeholder="Nazwisko" id="last_name" minlength="3" maxlength="80" name="last_name" size="20" type="text" />
                                             </div>
                                         </div>
                                         <div class="col-xl-6">
                                             <div class="comment-form__input-box">
-                                                <input type="text" placeholder="Numer telefonu" name="phone">
+                                                <input placeholder="Email" required id="email" maxlength="80" name="email" size="20" type="text" />
                                             </div>
                                         </div>
                                         <div class="col-xl-6">
                                             <div class="comment-form__input-box">
-                                                <input type="text" placeholder="Temat" name="subject">
+                                                <input placeholder="Numer telefonu"  id="phone" maxlength="40" name="phone" size="20" type="text" />
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12">
+                                            <div class="comment-form__input-box">
+                                                <input placeholder="Miasto"  id="city" maxlength="40" name="city" size="20" type="text" />
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-xl-12">
                                             <div class="comment-form__input-box text-message-box">
-                                                <textarea name="message" placeholder="Napisz wiadomość"></textarea>
+                                                <textarea placeholder="Wiadomość" name="description"></textarea>
                                             </div>
                                             <div class="comment-form__btn-box">
-                                                <button type="submit" class="thm-btn comment-form__btn">Wyślij wiadomość</button>
+                                                <input class="thm-btn comment-form__btn" type="submit" name="submit">
                                             </div>
                                         </div>
                                     </div>
@@ -244,6 +251,7 @@
             </div>
         </section>
         <!--Contact Page End-->
+
 
         <!--CTA One Start-->
         <section class="cta-one cta-three">
